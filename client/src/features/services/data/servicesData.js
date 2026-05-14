@@ -1,5 +1,6 @@
 import { FaHandSparkles, FaHeart, FaRegHandshake, FaRing, FaUserTie } from 'react-icons/fa';
-import { GiCrystalBall, GiPalmTree, GiSpiralArrow } from 'react-icons/gi';
+import { GiCrystalBall, GiSpiralArrow } from 'react-icons/gi';
+import { PiHandPalmFill } from "react-icons/pi";
 
 const servicesData = [
   {
@@ -10,7 +11,7 @@ const servicesData = [
   {
     title: 'Palmistry',
     description: 'Line-by-line palm interpretation revealing innate potential and future trends.',
-    icon: GiPalmTree,
+    icon: PiHandPalmFill,
   },
   {
     title: 'Career Guidance',
