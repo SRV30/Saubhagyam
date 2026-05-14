@@ -1,103 +1,56 @@
 # Saubhagyam
 
-Premium astrology consultation platform with a cinematic, luxury spiritual UI.
+Premium astrology consultation platform with cinematic UI, bilingual experience, and now a production-ready testimonials pipeline.
 
-## Tech Stack
+## Stack
+- **Client**: React + Vite, Tailwind CSS, Framer Motion, react-i18next
+- **Server**: Node.js, Express 5, Mongoose
+- **Database**: MongoDB Atlas
 
-### Client
-- React + Vite
-- Tailwind CSS
-- Framer Motion + GSAP
-- React Router
-- react-i18next
-- react-chatbot-kit
+## New Testimonials System
+### Backend (`/server`)
+- `Testimonial` model with fields: `fullName`, `review`, `rating`, `createdAt`, `isApproved`
+- Moderation pipeline:
+  - profanity checks
+  - link/spam detection
+  - min length check
+  - duplicate prevention (24h same name+review)
+- Publication logic:
+  - only **5-star** approved testimonials are publicly returned
+  - while total reviews are `< 10`, submissions remain manual (`isApproved: false`)
+  - once `> 10`, new **5-star** submissions are auto-approved
+- Routes:
+  - `GET /api/testimonials`
+  - `POST /api/testimonials`
 
-### Server
-- Node.js
-- Express.js
+### Frontend (`/client`)
+- Testimonials section fetches from backend API
+- Premium animated testimonial cards and moving carousel
+- New animated submission form:
+  - Full Name
+  - Review
+  - Rating stars (1–5)
+- Hindi/English support for form copy
+- Dark/light compatible glassmorphism styling
 
-## Features
-- Bilingual UI (English + Hindi)
-- Dark/Light theme toggle with persistence
-- Animated premium sections (Hero, Services, About, Testimonials, Contact)
-- Multi-step consultation booking flow with WhatsApp redirect
-- Floating rule-based chatbot (**Cosmic Guide**)
-- SEO-ready metadata and page-level title/description updates
+## Environment
+### Server `.env`
+Use `server/.env.example`:
+- `PORT`
+- `CLIENT_URL`
+- `MONGODB_URI`
+- `MONGODB_DB_NAME`
+- `WHATSAPP_BOOKING_NUMBER`
 
-## Project Structure
-
-```bash
-client/
-  src/
-    app/
-    components/
-    features/
-    hooks/
-    layouts/
-    lib/
-    locales/
-    pages/
-    styles/
-server/
-  src/
-    config/
-    routes/
-```
-
-## Environment Variables
-
-### Client (`client/.env.example`)
+### Client `.env`
+Use `client/.env.example`:
 - `VITE_API_BASE_URL`
 - `VITE_WHATSAPP_NUMBER`
 - `VITE_DEFAULT_LOCALE`
+- `VITE_BLOCKED_WORDS`
 
-### Server (`server/.env.example`)
-- `PORT`
-- `CLIENT_URL`
-- `WHATSAPP_BOOKING_NUMBER`
-
-## Setup
-
-### 1) Install dependencies
-
+## Run
 ```bash
-cd client
-npm install
-
-cd ../server
-npm install
+cd server && npm install && npm run dev
+cd client && npm install && npm run dev
 ```
-
-### 2) Configure env files
-
-Copy both `.env.example` files to `.env` and set values.
-
-### 3) Run development
-
-#### Client
-```bash
-cd client
-npm run dev
-```
-
-#### Server
-```bash
-cd server
-npm run dev
-```
-
-## Build
-
-```bash
-cd client
-npm run build
-```
-
-```bash
-cd server
-npm run start
-```
-
-## Notes
-- Booking is intentionally WhatsApp-first (no auth/admin/database).
-- Chatbot is rule-based (no AI integration).

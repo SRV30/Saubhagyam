@@ -15,7 +15,11 @@
     "testimonialTag": "TESTIMONIALS",
     "testimonialTitle": "What Clients Say",
     "contactTitle": "Get In Touch",
-    "send": "Send Message"
+    "send": "Send Message",
+    "reviewFormTitle": "Share Your Sacred Experience",
+    "fullName": "Full Name",
+    "review": "Your Review",
+    "submitReview": "Submit Review"
   },
   "common": {
     "comingSoon": "Cinematic page experience is coming soon.",
