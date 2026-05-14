@@ -1,9 +1,10 @@
 const routeConfig = {
   home: '/',
-  about: '/about',
   services: '/services',
-  blog: '/blog',
+  about: '/about',
+  testimonials: '/testimonials',
   contact: '/contact',
+  bookConsultation: '/book-consultation',
 };
 
 export default routeConfig;

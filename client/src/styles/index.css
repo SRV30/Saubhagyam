@@ -2,6 +2,16 @@
 @import 'tailwindcss';
 
 :root {
+  --brand-bg: #f9f0df;
+  --brand-surface: #efe5ff;
+  --brand-elevated: #ffffff;
+  --brand-gold: #b8860b;
+  --brand-gold-bright: #d4af37;
+  --brand-violet: #7B2FF7;
+  --brand-cream: #291432;
+}
+
+:root.dark {
   --brand-bg: #090015;
   --brand-surface: #120020;
   --brand-elevated: #1A0933;
@@ -9,16 +19,6 @@
   --brand-gold-bright: #FFD700;
   --brand-violet: #7B2FF7;
   --brand-cream: #F7EAD4;
-}
-
-:root[data-theme='light'] {
-  --brand-bg: #f8f1ff;
-  --brand-surface: #ffffff;
-  --brand-elevated: #f1e7ff;
-  --brand-gold: #9c6d03;
-  --brand-gold-bright: #b88a00;
-  --brand-violet: #6a29d4;
-  --brand-cream: #21163a;
 }
 
 @theme {
@@ -39,7 +39,7 @@ body {
 }
 
 .bg-app-gradient {
-  background-image: radial-gradient(circle at 20% 20%, #1a0933 0%, #120020 40%, #090015 100%);
+  background-image: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--brand-violet) 28%, transparent) 0%, var(--brand-surface) 42%, var(--brand-bg) 100%);
 }
 
 .container-padded {

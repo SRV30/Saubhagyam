@@ -1,10 +1,11 @@
 {
   "navigation": {
     "home": "होम",
-    "about": "परिचय",
     "services": "सेवाएँ",
-    "blog": "ब्लॉग",
-    "contact": "संपर्क"
+    "about": "परिचय",
+    "testimonials": "प्रशंसापत्र",
+    "contact": "संपर्क",
+    "bookConsultation": "परामर्श बुक करें"
   },
   "common": {
     "comingSoon": "सिनेमैटिक पेज अनुभव जल्द आ रहा है।"
