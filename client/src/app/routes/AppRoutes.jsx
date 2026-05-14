@@ -7,6 +7,7 @@ import ServicesPage from '../../pages/ServicesPage';
 import BookConsultationPage from '../../pages/BookConsultationPage';
 import AboutPage from '../../pages/AboutPage';
 import TestimonialsPage from '../../pages/TestimonialsPage';
+import ContactPage from '../../pages/ContactPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -15,7 +16,7 @@ const AppRoutes = () => (
       <Route path={routeConfig.services} element={<ServicesPage />} />
       <Route path={routeConfig.about} element={<AboutPage />} />
       <Route path={routeConfig.testimonials} element={<TestimonialsPage />} />
-      <Route path={routeConfig.contact} element={<PagePlaceholder titleKey="navigation.contact" />} />
+      <Route path={routeConfig.contact} element={<ContactPage />} />
       <Route path={routeConfig.bookConsultation} element={<BookConsultationPage />} />
     </Route>
     <Route path="*" element={<Navigate to={routeConfig.home} replace />} />

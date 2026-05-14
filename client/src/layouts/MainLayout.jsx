@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SiteHeader from '../components/common/SiteHeader';
 import FloatingChatbot from '../features/chatbot/components/FloatingChatbot';
+import SiteFooter from '../components/common/SiteFooter';
 
 const THEME_KEY = 'saubhagyam-theme';
 const LANG_KEY = 'saubhagyam-language';
@@ -26,6 +27,7 @@ const MainLayout = () => {
       <main className="container-padded py-10">
         <Outlet />
       </main>
+      <SiteFooter />
       <FloatingChatbot />
     </div>
   );
