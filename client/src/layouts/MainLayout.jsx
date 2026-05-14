@@ -30,7 +30,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <SiteFooter />
-      <FloatingChatbot />
+      {/* <FloatingChatbot /> */}
     </div>
   );
 };

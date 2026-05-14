@@ -3,7 +3,7 @@ const { createTestimonial, getPublicTestimonials } = require('../controllers/tes
 
 const router = Router();
 
-router.get('/', getPublicTestimonials);
-router.post('/', createTestimonial);
+router.get('/get', getPublicTestimonials);
+router.post('/create', createTestimonial);
 
 module.exports = router;
