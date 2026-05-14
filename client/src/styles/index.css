@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --brand-bg: #090015;
+  --brand-surface: #120020;
+  --brand-elevated: #1A0933;
+  --brand-gold: #D4AF37;
+  --brand-gold-bright: #FFD700;
+  --brand-violet: #7B2FF7;
+  --brand-cream: #F7EAD4;
+}
+
+:root[data-theme='light'] {
+  --brand-bg: #f8f1ff;
+  --brand-surface: #ffffff;
+  --brand-elevated: #f1e7ff;
+  --brand-gold: #9c6d03;
+  --brand-gold-bright: #b88a00;
+  --brand-violet: #6a29d4;
+  --brand-cream: #21163a;
+}
+
+@theme {
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-midnight: var(--brand-surface);
+  --color-brand-elevated: var(--brand-elevated);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-bright: var(--brand-gold-bright);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-cream: var(--brand-cream);
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--brand-bg);
+}
+
+.bg-app-gradient {
+  background-image: radial-gradient(circle at 20% 20%, #1a0933 0%, #120020 40%, #090015 100%);
+}
+
+.container-padded {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply rounded-2xl border border-brand-gold/30 bg-brand-elevated/40 shadow-2xl backdrop-blur-xl;
+}
