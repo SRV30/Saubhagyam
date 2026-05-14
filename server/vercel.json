@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "name": "astrology",
+  "name": "astrology-server",
   "builds": [
     {
-      "src": "./server.js",
+      "src": "src/server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "src/server.js"
     }
   ]
 }
