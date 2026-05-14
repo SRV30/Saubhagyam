@@ -7,6 +7,16 @@
     "contact": "संपर्क",
     "bookConsultation": "परामर्श बुक करें"
   },
+  "home": {
+    "aboutTag": "ज्योतिषाचार्य परिचय",
+    "aboutTitle": "प्राचीन वैदिक दृष्टि से आत्म-मार्गदर्शन",
+    "servicesTag": "हमारी सेवाएँ",
+    "servicesTitle": "जीवन के हर अध्याय के लिए मार्गदर्शन",
+    "testimonialTag": "प्रशंसापत्र",
+    "testimonialTitle": "ग्राहक क्या कहते हैं",
+    "contactTitle": "संपर्क करें",
+    "send": "संदेश भेजें"
+  },
   "common": {
     "comingSoon": "सिनेमैटिक पेज अनुभव जल्द आ रहा है।",
     "notFound": "पेज नहीं मिला"

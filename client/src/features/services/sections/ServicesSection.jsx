@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import servicesData from "../data/servicesData";
 import ServiceCard from "../components/ServiceCard";
 
-const ServicesSection = () => (
+const ServicesSection = () => {
+  const { t } = useTranslation();
+
+  return (
   <section className="relative py-16 sm:py-20">
     <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(123,47,247,0.25),transparent_42%),radial-gradient(circle_at_85%_20%,rgba(255,215,0,0.1),transparent_38%)]" />
 
@@ -14,10 +18,10 @@ const ServicesSection = () => (
       className="mx-auto max-w-3xl text-center"
     >
       <p className="font-medium tracking-[0.22em] text-brand-gold">
-        OUR SERVICES
+        {t("home.servicesTag")}
       </p>
       <h2 className="mt-3 font-heading text-4xl text-brand-cream sm:text-5xl">
-        Guidance for Every Chapter of Life
+        {t("home.servicesTitle")}
       </h2>
       <p className="mt-4 text-brand-cream/80">
         Premium astrology consultations crafted with ancient wisdom and modern
@@ -37,6 +41,7 @@ const ServicesSection = () => (
       ))}
     </div>
   </section>
-);
+  );
+};
 
 export default ServicesSection;

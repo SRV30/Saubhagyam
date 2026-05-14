@@ -7,6 +7,16 @@
     "contact": "Contact",
     "bookConsultation": "Book Consultation"
   },
+  "home": {
+    "aboutTag": "ABOUT THE ASTROLOGER",
+    "aboutTitle": "Guiding Souls Through Ancient Vedic Insight",
+    "servicesTag": "OUR SERVICES",
+    "servicesTitle": "Guidance for Every Chapter of Life",
+    "testimonialTag": "TESTIMONIALS",
+    "testimonialTitle": "What Clients Say",
+    "contactTitle": "Get In Touch",
+    "send": "Send Message"
+  },
   "common": {
     "comingSoon": "Cinematic page experience is coming soon.",
     "notFound": "Page not found"

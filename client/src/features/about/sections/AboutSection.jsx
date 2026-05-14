@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import astrologerImg from "../../../assets/saubhagyam_dark.png";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -31,11 +33,11 @@ const AboutSection = () => {
           className="space-y-6"
         >
           <p className="text-sm tracking-[0.2em] text-brand-gold">
-            ABOUT THE ASTROLOGER
+            {t("home.aboutTag")}
           </p>
 
           <h2 className="font-heading text-4xl leading-tight text-brand-cream sm:text-5xl">
-            Guiding Souls Through Ancient Vedic Insight
+            {t("home.aboutTitle")}
           </h2>
 
           <p className="text-brand-cream/85">

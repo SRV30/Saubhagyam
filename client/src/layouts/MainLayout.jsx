@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SiteHeader from '../components/common/SiteHeader';
 import FloatingChatbot from '../features/chatbot/components/FloatingChatbot';
 import SiteFooter from '../components/common/SiteFooter';
+import ScrollProgress from '../components/common/ScrollProgress';
 
 const THEME_KEY = 'saubhagyam-theme';
 const LANG_KEY = 'saubhagyam-language';
@@ -23,6 +24,7 @@ const MainLayout = () => {
 
   return (
     <div className="min-h-screen bg-app-gradient text-brand-cream transition-colors duration-500">
+      <ScrollProgress />
       <SiteHeader />
       <main className="container-padded py-10">
         <Outlet />

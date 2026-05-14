@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import routeConfig from "../../../app/routes/routeConfig";
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
   const [formData, setFormData] = useState({
@@ -113,7 +115,7 @@ ${message}
           className="glass-panel p-6 sm:p-8"
         >
           <h2 className="font-heading text-4xl text-brand-gold-bright">
-            Get In Touch
+            {t("home.contactTitle")}
           </h2>
 
           <p className="mt-2 text-brand-cream/80">
@@ -212,7 +214,7 @@ ${message}
               onClick={handleSubmit}
               className="btn-gold"
             >
-              Send Message
+              {t("home.send")}
             </motion.button>
           </div>
         </motion.div>
