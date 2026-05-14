@@ -8,6 +8,7 @@
     "bookConsultation": "Book Consultation"
   },
   "common": {
-    "comingSoon": "Cinematic page experience is coming soon."
+    "comingSoon": "Cinematic page experience is coming soon.",
+    "notFound": "Page not found"
   }
 }
