@@ -98,11 +98,11 @@ const BookingSection = () => {
         </AnimatePresence>
 
         <div className="mt-8 flex flex-wrap justify-between gap-3">
-          <button disabled={step === 1} onClick={() => setStep((s) => Math.max(1, s - 1))} className="rounded-full border border-brand-gold/35 px-5 py-2 text-brand-gold disabled:opacity-40">Back</button>
+          <button disabled={step === 1} onClick={() => setStep((s) => Math.max(1, s - 1))} className="btn-outline-gold px-5 py-2 disabled:opacity-40">Back</button>
           {step < 3 ? (
-            <button disabled={step === 1 && !formData.service} onClick={() => setStep((s) => Math.min(3, s + 1))} className="rounded-full bg-brand-gold/20 px-6 py-2 text-brand-gold shadow-[0_0_20px_rgba(212,175,55,0.35)] disabled:opacity-40">Continue</button>
+            <button disabled={step === 1 && !formData.service} onClick={() => setStep((s) => Math.min(3, s + 1))} className="btn-gold px-6 py-2 disabled:opacity-40">Continue</button>
           ) : (
-            <button onClick={submitToWhatsApp} className="rounded-full bg-brand-gold/25 px-6 py-2 font-semibold text-brand-gold shadow-[0_0_24px_rgba(212,175,55,0.4)]">Continue on WhatsApp</button>
+            <button onClick={submitToWhatsApp} className="btn-gold px-6 py-2">Continue on WhatsApp</button>
           )}
         </div>
       </motion.div>

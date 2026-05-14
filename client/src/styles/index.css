@@ -62,3 +62,29 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+.section-shell {
+  @apply py-14 sm:py-16 lg:py-20;
+}
+
+.btn-gold {
+  @apply rounded-full bg-brand-gold/20 px-5 py-2.5 font-semibold text-brand-gold shadow-[0_0_20px_rgba(212,175,55,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-brand-gold/35;
+}
+
+.btn-outline-gold {
+  @apply rounded-full border border-brand-gold/40 px-5 py-2.5 font-medium text-brand-gold transition duration-300 hover:bg-brand-gold/10;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #100022; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#7B2FF7,#D4AF37); border-radius: 9999px; }

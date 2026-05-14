@@ -22,9 +22,9 @@ const SiteFooter = () => {
         <div>
           <h5 className="font-heading text-brand-gold">Quick Links</h5>
           <div className="mt-3 space-y-2 text-sm">
-            <Link to={routeConfig.home} className="block text-brand-cream/85">Home</Link>
-            <Link to={routeConfig.about} className="block text-brand-cream/85">About</Link>
-            <Link to={routeConfig.contact} className="block text-brand-cream/85">Contact</Link>
+            <Link to={routeConfig.home} className="block text-brand-cream/85 transition hover:text-brand-gold">Home</Link>
+            <Link to={routeConfig.about} className="block text-brand-cream/85 transition hover:text-brand-gold">About</Link>
+            <Link to={routeConfig.contact} className="block text-brand-cream/85 transition hover:text-brand-gold">Contact</Link>
           </div>
         </div>
         <div>
@@ -38,7 +38,7 @@ const SiteFooter = () => {
           <div className="mt-3 flex items-center gap-3 text-brand-gold">
             <a href="#"><FaInstagram /></a><a href="#"><FaFacebookF /></a><a href="#"><FaYoutube /></a>
           </div>
-          <button onClick={toggleLanguage} className="mt-4 rounded-full border border-brand-gold/35 px-3 py-1 text-xs text-brand-gold">{i18n.language.startsWith('hi') ? 'EN' : 'हिं'}</button>
+          <button onClick={toggleLanguage} className="btn-outline-gold mt-4 !px-3 !py-1 text-xs">{i18n.language.startsWith('hi') ? 'EN' : 'हिं'}</button>
         </div>
       </div>
       <p className="container-padded mt-8 text-xs text-brand-cream/60">© {new Date().getFullYear()} Saubhagyam. All rights reserved.</p>
