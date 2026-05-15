@@ -1,21 +1,21 @@
-const express = require('express');
-const cors = require('cors');
-const env = require('./config/env');
-const routes = require('./routes');
-const connectDb = require('./db/connect');
-const errorHandler = require('./middlewares/errorHandler');
+const express = require("express");
+const cors = require("cors");
+const env = require("./config/env");
+const routes = require("./routes");
+const connectDb = require("./db/connect");
+const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 
 app.use(
   cors({
-    origin: env.clientUrl || env.clientUrlDev,
+    origin: env.clientUrlDev || env.clientUrl,
     credentials: true,
   })
 );
 app.use(express.json());
 
-app.use('/api', routes);
+app.use("/api", routes);
 app.use(errorHandler);
 
 connectDb()
@@ -25,6 +25,6 @@ connectDb()
     });
   })
   .catch((error) => {
-    console.error('Failed to connect to database', error.message);
+    console.error("Failed to connect to database", error.message);
     process.exit(1);
   });
